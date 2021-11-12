@@ -16,7 +16,7 @@ body {
 
 #dashboard {
     background: #ffffff;
-    
+
     justify-self: center;
     align-self: center;
 
@@ -68,6 +68,7 @@ body {
 .tab-container .tab-content {
     display: none;
     padding: 2rem 0 0;
+    width: 100%;
 }
 
 .tab-container #tab1:checked ~ .content1,
