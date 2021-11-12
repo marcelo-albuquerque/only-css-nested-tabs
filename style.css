@@ -22,13 +22,17 @@ body {
     width: 100%;
 }
 
+/* TAB ELEMENTS */
+.tab-elements label {
+    cursor: pointer;
+}
+
 .tab-elements {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-/* TAB ELEMENTS */
 .tab-elements h1 {
     padding-bottom: 1rem;
 
@@ -83,10 +87,11 @@ body {
             border-radius: 0 1rem 1rem 0;
         }
 
-#main-tab1:checked ~ .content1,
-#main-tab2:checked ~ .content2,
-#main-tab3:checked ~ .content3,
-#main-tab4:checked ~ .content4 {
+/* Relationship between label and input from MAIN TAB */
+#main-tab1:checked ~ .main-tab1,
+#main-tab2:checked ~ .main-tab2,
+#main-tab3:checked ~ .main-tab3,
+#main-tab4:checked ~ .main-tab4 {
     display: block;
 }
 
@@ -106,6 +111,7 @@ body {
 .sub-tab .tabs {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .sub-tab label {
@@ -127,26 +133,30 @@ body {
     width: 100%;
 }
 
-.sub-tab #sub-content1-1:checked ~ .content1,
-.sub-tab #sub-content1-2:checked ~ .content2,
-.sub-tab #sub-content1-3:checked ~ .content3 {
+/* Relationship between label and input from SUB TAB in .main-tab1 */
+.sub-tab #sub-tab1-1:checked ~ .content1,
+.sub-tab #sub-tab1-2:checked ~ .content2,
+.sub-tab #sub-tab1-3:checked ~ .content3 {
     display: block;
 }
 
-.sub-tab #sub-content2-1:checked ~ .content1,
-.sub-tab #sub-content2-2:checked ~ .content2,
-.sub-tab #sub-content2-3:checked ~ .content3 {
+/* Relationship between label and input from SUB TAB in .main-tab2 */
+.sub-tab #sub-tab2-1:checked ~ .content1,
+.sub-tab #sub-tab2-2:checked ~ .content2,
+.sub-tab #sub-tab2-3:checked ~ .content3 {
     display: block;
 }
 
-.sub-tab #sub-content3-1:checked ~ .content1,
-.sub-tab #sub-content3-2:checked ~ .content2,
-.sub-tab #sub-content3-3:checked ~ .content3 {
+/* Relationship between label and input from SUB TAB in .main-tab3 */
+.sub-tab #sub-tab3-1:checked ~ .content1,
+.sub-tab #sub-tab3-2:checked ~ .content2,
+.sub-tab #sub-tab3-3:checked ~ .content3 {
     display: block;
 }
 
-.sub-tab #sub-content4-1:checked ~ .content1,
-.sub-tab #sub-content4-2:checked ~ .content2,
-.sub-tab #sub-content4-3:checked ~ .content3 {
+/* Relationship between label and input from SUB TAB in .main-tab4 */
+.sub-tab #sub-tab4-1:checked ~ .content1,
+.sub-tab #sub-tab4-2:checked ~ .content2,
+.sub-tab #sub-tab4-3:checked ~ .content3 {
     display: block;
 }
