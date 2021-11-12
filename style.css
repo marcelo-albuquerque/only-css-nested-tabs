@@ -2,72 +2,151 @@
 @import url('https://unpkg.com/modern-css-reset/dist/reset.min.css');
 
 /* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
 
 
 body {
     background: #f1f1f1;
     
     display: grid;
+    justify-items: center;
+    padding: 2rem;
     
     font-family: 'Inter', sans-serif;
+    font-weight: 500;
     color: #292929;
 }
 
-#dashboard {
-    background: #ffffff;
-
-    justify-self: center;
-    align-self: center;
-
-    padding: 2rem;
-    width: 100%;
+.wrapper {
     max-width: 60rem;
-
-    border: 0.0125rem solid #dddddd;
-    border-radius: 1rem;
+    width: 100%;
 }
 
-#dashboard h1 {
+.tab-elements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* TAB ELEMENTS */
+.tab-elements h1 {
     padding-bottom: 1rem;
 
     border-bottom: 0.0625rem solid #dddddd;
 }
 
-/* TAB CONTAINER */
-
-.tab-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2.5rem;
-}
-
-.tab-container input { 
+.tab-elements input { 
     display: none;
 }
 
-.tab-container label {
+.tab-elements label {
     display: inline-flex;
+}
+
+/* MAINTAB */
+.main-tab + label {
+    background: #ffffff;
+
+    position: relative;
+
+    padding: 1rem 1.5rem;
+
+    font-size: 1.2rem;
+}
+    .main-tab + label:first-of-type {
+        border-radius: 1rem 0 0 1rem;
+    }
+    .main-tab + label:last-of-type {
+        border-radius: 0 1rem 1rem 0;
+    }
+    .main-tab:checked + label {
+        background: #4160c5;
+        color: #ffffff;
+    }
+    .main-tab + label::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+        
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
+        .main-tab + label:first-of-type::after {
+            border-radius: 1rem 0 0 1rem;
+        }
+        .main-tab + label:last-of-type::after {
+            border-radius: 0 1rem 1rem 0;
+        }
+
+#main-tab1:checked ~ .content1,
+#main-tab2:checked ~ .content2,
+#main-tab3:checked ~ .content3,
+#main-tab4:checked ~ .content4 {
+    display: block;
+}
+
+/* SUBTAB */
+.sub-tab {
+    background: #ffffff;
+    
+    display: none;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    width: 100%;
+    
+    border: 0.0125rem solid #dddddd;
+    border-radius: 1rem;
+}
+
+.sub-tab .tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-tab label {
     padding: 1rem;
 
     border-bottom: 0.1875rem solid #dddddd;
 
     transition: border 0.3s;
 }
-    .tab-container input:checked + label {
+    .sub-tab input:checked + label {
         color: #6315bd;
 
         border-color: #6315bd;
     }
 
-.tab-container .tab-content {
+.sub-tab .tab-content {
     display: none;
     padding: 2rem 0 0;
     width: 100%;
 }
 
-.tab-container #tab1:checked ~ .content1,
-.tab-container #tab2:checked ~ .content2,
-.tab-container #tab3:checked ~ .content3 {
+.sub-tab #sub-content1-1:checked ~ .content1,
+.sub-tab #sub-content1-2:checked ~ .content2,
+.sub-tab #sub-content1-3:checked ~ .content3 {
+    display: block;
+}
+
+.sub-tab #sub-content2-1:checked ~ .content1,
+.sub-tab #sub-content2-2:checked ~ .content2,
+.sub-tab #sub-content2-3:checked ~ .content3 {
+    display: block;
+}
+
+.sub-tab #sub-content3-1:checked ~ .content1,
+.sub-tab #sub-content3-2:checked ~ .content2,
+.sub-tab #sub-content3-3:checked ~ .content3 {
+    display: block;
+}
+
+.sub-tab #sub-content4-1:checked ~ .content1,
+.sub-tab #sub-content4-2:checked ~ .content2,
+.sub-tab #sub-content4-3:checked ~ .content3 {
     display: block;
 }
