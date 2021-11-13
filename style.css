@@ -10,11 +10,16 @@ body {
     
     display: grid;
     justify-items: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
     
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     color: #292929;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
 }
 
 .wrapper {
@@ -31,12 +36,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.tab-elements h1 {
-    padding-bottom: 1rem;
-
-    border-bottom: 0.0625rem solid #dddddd;
 }
 
 .tab-elements input { 
@@ -92,7 +91,7 @@ body {
 #main-tab2:checked ~ .main-tab2,
 #main-tab3:checked ~ .main-tab3,
 #main-tab4:checked ~ .main-tab4 {
-    display: block;
+    display: flex;
 }
 
 /* SUBTAB */
@@ -100,6 +99,7 @@ body {
     background: #ffffff;
     
     display: none;
+    flex-wrap: wrap;
     margin-top: 2.5rem;
     padding: 2rem;
     width: 100%;
@@ -108,10 +108,12 @@ body {
     border-radius: 1rem;
 }
 
-.sub-tab .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+.sub-tab .sub-tab-title {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    width: 100%;
+
+    border-bottom: 0.0625rem solid #dddddd;
 }
 
 .sub-tab label {
@@ -160,3 +162,40 @@ body {
 .sub-tab #sub-tab4-3:checked ~ .content3 {
     display: block;
 }
+
+
+.dev-footer {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0 0;
+
+    font-size: 0.9rem;
+}
+
+.dev-footer .icon {
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+.dev-footer a {
+    position: relative;
+
+    text-decoration: none;
+    color: inherit;
+}
+    .dev-footer a::after {
+        background: #6315bd;
+        content: "";
+
+        position: absolute;
+        bottom: -0.125rem;
+        left: 0;
+
+        width: 0;
+        height: 0.125rem;
+
+        transition: width 0.3s;
+    }
+    .dev-footer a:hover::after {
+        width: 100%;
+    }
