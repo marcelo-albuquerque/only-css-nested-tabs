@@ -1,4 +1,4 @@
-<img src="https://repository-images.githubusercontent.com/427398651/e1d94256-3dac-484d-8636-24bf8353c4fa" />
+<img src="https://repository-images.githubusercontent.com/427398651/c2cabd74-b0a1-4ec7-9047-2b8b868f26d4" />
 
 # Nested Tabs only with CSS
 
