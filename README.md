@@ -4,9 +4,9 @@
 
 Nested Tabs built using only HTML and CSS, for easy implementation in projects.
 
-## Como iniciar o projeto
+## How to start project
 
-### Clone do respositório
+### Repository clone
 
 Simply clone the repository to your development environment:
 
@@ -14,7 +14,7 @@ Simply clone the repository to your development environment:
 
 Use your code editor and make the necessary changes.
 
-## Autor
+## Author
 
 <a href="https://marceloalbuquerque.com.br" target="_blank">
     <img src="https://www.dropbox.com/s/n7vvbhbxmj1ncjy/Github%20cover.jpg?raw=1" />
