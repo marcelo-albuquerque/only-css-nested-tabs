@@ -17,5 +17,5 @@ Use your code editor and make the necessary changes.
 ## Author
 
 <a href="https://marceloalbuquerque.com.br" target="_blank">
-    <img src="https://www.dropbox.com/s/n7vvbhbxmj1ncjy/Github%20cover.jpg?raw=1" />
+    <img src="https://www.dropbox.com/s/u3itftlnd3jhwx9/cover_EN.jpg?raw=1" />
 </a>
